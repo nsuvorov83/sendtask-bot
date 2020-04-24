@@ -2,7 +2,8 @@
 A simple telegram bot for sending tasks from Telegram to e-mail mailbox (Outlook) to parse incoming e-mails as tasks.
 
 ## Clone
-```git clone https://github.com/nsuvorov83/sendtask-bot.git && cd sendtask-bot
+```
+git clone https://github.com/nsuvorov83/sendtask-bot.git && cd sendtask-bot
 ```
 
 ## Configure
