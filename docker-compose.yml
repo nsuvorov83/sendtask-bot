@@ -1,0 +1,6 @@
+version: '3'
+services:
+  sendtask-bot:
+    image: 'sendtask-bot'
+    env_file:
+     - .env

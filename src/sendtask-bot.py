@@ -1,14 +1,15 @@
+import os
 import telebot
 import smtplib
 from email.mime.text import MIMEText
 
 #Configuration
-CFG_TOKEN = '%TELEGRAM_BOT_TOKEN%'
-CFG_OWNER_ID = %YOUR_USER_ID%
-CFG_SMTP_LOGIN = '%YOUR_SMTP_LOGIN_ON_YANDEX%'
-CFG_SMTP_PASS = '%YOUR_SMTP_PASS_ON_YANDEX%'
-CFG_SMTP_FROM = '%FROM_EMAIL_ADDRESS%'
-CFG_SMTP_TO = '%TO_EMAIL_ADDRESS%'
+CFG_TOKEN = os.environ.get('CFG_TOKEN') #TELEGRAM_BOT_TOKEN
+CFG_OWNER_ID = os.environ.get('CFG_OWNER_ID') #YOUR_USER_ID_IN_TELEGRAM
+CFG_SMTP_LOGIN = os.environ.get('CFG_SMTP_LOGIN') #'%YOUR_SMTP_LOGIN_ON_YANDEX%'
+CFG_SMTP_PASS = os.environ.get('CFG_SMTP_PASS') #'%YOUR_SMTP_PASS_ON_YANDEX%'
+CFG_SMTP_FROM = os.environ.get('CFG_SMTP_FROM') #'%FROM_EMAIL_ADDRESS%'
+CFG_SMTP_TO = os.environ.get('CFG_SMTP_TO') #'%TO_EMAIL_ADDRESS%'
 
 bot = telebot.TeleBot(CFG_TOKEN)
 
