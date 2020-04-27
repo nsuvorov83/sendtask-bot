@@ -14,3 +14,7 @@ Edit "Configuration" section in src/sendtask-bot.py . The bot processes messages
 docker build --tag=sendtask-bot .
 docker run  -it -d sendtask-bot
 ```
+
+## TODO
+- [ ] Подставлять имя отправителя, если пересылаю чужое сообщение в бот. Если сам пишу - не подставлять
+- [ ] Добавить теги
