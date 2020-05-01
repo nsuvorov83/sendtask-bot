@@ -6,15 +6,16 @@ from email.mime.text import MIMEText
 
 #Configuration
 CFG_TOKEN = os.environ.get('CFG_TOKEN') #TELEGRAM_BOT_TOKEN
-CFG_OWNER_ID = os.environ.get('CFG_OWNER_ID') #YOUR_USER_ID_IN_TELEGRAM
 CFG_SMTP_LOGIN = os.environ.get('CFG_SMTP_LOGIN') #'%YOUR_SMTP_LOGIN_ON_YANDEX%'
 CFG_SMTP_PASS = os.environ.get('CFG_SMTP_PASS') #'%YOUR_SMTP_PASS_ON_YANDEX%'
 CFG_SMTP_FROM = os.environ.get('CFG_SMTP_FROM') #'%FROM_EMAIL_ADDRESS%'
 CFG_SMTP_TO = os.environ.get('CFG_SMTP_TO') #'%TO_EMAIL_ADDRESS%'
 
 #Change type if OWNER_ID is str
-if type(CFG_OWNER_ID) is str:
-    CFG_OWNER_ID = int(CFG_OWNER_ID)
+try:
+    CFG_OWNER_ID = int(os.environ.get('CFG_OWNER_ID')) #YOUR_USER_ID_IN_TELEGRAM
+except:
+    CFG_OWNER_ID = os.environ.get('CFG_OWNER_ID')
 
 bot = telebot.TeleBot(CFG_TOKEN)
 
