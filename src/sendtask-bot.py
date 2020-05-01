@@ -34,6 +34,13 @@ def do_next(message):
     else:
         msg = MIMEText("Задача из Telegram")
     
+    #Check whether forwarded from another user
+    if "forward_sender_name" in message.json:
+        txt = f'[{message.json["forward_sender_name"]}] {txt}'
+    elif "forward_from" in message.json:
+        txt = f'[{message.json["forward_from"]["first_name"]}] {txt}'
+
+    #Add ready data to MIME object
     msg['From'] = CFG_SMTP_FROM
     msg['To'] = CFG_SMTP_TO
     msg['Subject'] = f'[TASK] {txt}'
