@@ -1,6 +1,7 @@
 version: '3'
 services:
   sendtask-bot:
-    image: 'sendtask-bot'
+    build: .
+    restart: always
     env_file:
      - .env

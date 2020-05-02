@@ -11,7 +11,6 @@ Edit and remove "_example" in .env_example file . The bot processes messages fro
 
 ## Run in docker
 ```
-docker build . -t sendtask-bot
 docker-compose up -d
 ```
 
