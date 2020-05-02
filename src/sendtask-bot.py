@@ -28,8 +28,12 @@ def get_text_messages(message):
         pass
 
 def do_next(message):
-    #Sening a message to outlook
+    #Ping
+    if(message.text == 'ping'):
+        bot.send_message(message.from_user.id, "pong")
+        return 0
     
+    #Sening a message to outlook
     #Check if Subject is too long
     txt = message.text
     msg = MIMEText('')
