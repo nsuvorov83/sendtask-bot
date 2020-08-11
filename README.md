@@ -8,6 +8,7 @@ git clone https://github.com/nsuvorov83/sendtask-bot.git && cd sendtask-bot
 
 ## Configure
 Edit and remove "_example" in .env_example file . The bot processes messages from CFG_OWNER_ID only. You can learn your telegram user_id using @my_id_bot .
+Create a rule in your Outlook as showed in image below to setting tasks automatically.
 ![Setting a new rule in Outlook](https://github.com/nsuvorov83/sendtask-bot/raw/master/sendtask_outlook.PNG)
 
 ## Run in docker
